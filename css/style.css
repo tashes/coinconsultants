@@ -23,7 +23,7 @@ canvas {
   vertical-align: bottom;
 }
 
-#particles-js {
+.particles-js-canvas-el {
   position:absolute;
   top:0px;
   left:0px;
@@ -183,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .carousel-content {
+  z-index:1;
   text-align: center;
 }
 
