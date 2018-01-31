@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/logo.png" rel="icon">
+  <link href="img/placeholder.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -47,7 +47,9 @@
       <div id="logo" class="pull-left">
         <!--<h1><a href="#intro" class="scrollto">CC</a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="#intro"><img src="img/logo30.png" alt="" title="" width="5%"/> <span id="firstlogo" style="font-family:'Abril Fatface', cursive; color:aliceblue; font-size: 1.2em;"><span id="logosecond" style="color:rgb(255, 189, 74); font-size: 1.2em">CC </span>Coin Consultants</span></h3></a>
+        <a href="#intro"><img src="img/placeholder.png" alt="" title="" width="5%"/> 
+          <span id="firstlogo" style="font-family:'Abril Fatface', cursive; color:aliceblue; font-size: 1.2em;">
+            <span id="logosecond" style="color:rgb(255, 189, 74); font-size: 1.2em">CC </span>Coin Consultants</span></h3></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -88,9 +90,11 @@
                 <h2>We are professional</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                
               </div>
             </div>
           </div>
+          <div id="particles-js"></div>
 <!--
           <div class="carousel-item" style="background-image: url('img/intro-carousel/2.jpg');">
             <div class="carousel-container">
@@ -882,6 +886,119 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script src="js/particles.js"></script>
+  <script>
+    particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+  </script>
 
 </body>
 </html>
