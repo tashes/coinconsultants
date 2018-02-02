@@ -62,7 +62,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li>-->
-          <li><a href="#call-to-action">Join us</a></li>
+          <li><a href="#call-to-action">Join</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -84,7 +84,10 @@
 
             <div id="particles-js" class="carousel-container">
               <div class="carousel-content">
-                <h2 id="introtitletext">We help you <span style="min-height:67.2px" class="scramble"></span></h2>
+                <h2 id="introtitletext">We help you <span
+                  class="txt-rotate"
+                  data-period="2000"
+                  data-rotate='[ "invest", "seek high returns", "embrace the crypto revolution. As it comes."]'></span></h2>
                 <p>
                     Coin Consultants is a Cryptocurrency and Initial Coin Offering (ICO) Investors Club established to help High Net Worth Investors and Funds looking to enter the high risk/high return ICO market.
                 </p>
@@ -166,7 +169,7 @@
 
           <div class="col-lg-4 box">
             <i><img src="./img/stuff/Negotiate.svg"/></i>
-            <h4 class="title">Negoting favourable terms with upcoming ICOs</h4>
+            <h4 class="title">Negotiating favourable terms with upcoming ICOs</h4>
           </div>
 
           <div class="col-lg-4 box">
@@ -502,6 +505,64 @@
 window.addEventListener('load', function () {
   Scramble.select('#introtitletext').setText('We are Coin Consultants').descramble();
 });
+
+
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
   </script>
 
 </body>
