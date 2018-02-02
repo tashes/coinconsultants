@@ -1012,6 +1012,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
+/* Elevator Section
+--------------------------------*/
+#elevator {
+  padding: 60px 0;
+}
+
+#elevator .header-text {
+  margin-bottom: 0px;
+}
+
+#elevator img {
+  margin-bottom: 20px;
+}
+
+
 /* Clients Section
 --------------------------------*/
 #clients {
