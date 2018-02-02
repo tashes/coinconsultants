@@ -574,7 +574,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Featured Services Section
 --------------------------------*/
 #featured-services {
-  background: #000;
+  background: #000000;
+  text-align: center;
 }
 
 #featured-services .box {
