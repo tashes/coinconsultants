@@ -1012,6 +1012,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
+/* Testimonials Section
+--------------------------------*/
+#elevator {
+  padding: 60px 0;
+}
+
+#elevator img {
+  width: 800px;
+}
+
 /* Clients Section
 --------------------------------*/
 #clients {
