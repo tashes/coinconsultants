@@ -1058,7 +1058,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #ddd;
 }
 
-.owl-carousel .owl-stage {
+.owl-carousel {
   display: flex;
   align-items: center;
 }
