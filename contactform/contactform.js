@@ -100,7 +100,13 @@ jQuery(document).ready(function($) {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
-        } else {
+        }
+        else if(msg == 'invalid')
+        {
+          $("#sendmessage").removeClass("show");
+          $("#errormessage").addClass("show");         
+        } 
+        else {
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
           $('#errormessage').html(msg);
