@@ -77,7 +77,7 @@ var TextScramble = function () {
   return TextScramble;
 }();
 
-var phrases = ['Invest', '', 'Mitigate risk', '', 'be up with the revolution',''];
+var phrases = ['invest', '', 'seek high returns', '', 'embrace the crypto revolution','embrace the crypto revolution. As it comes.',''];
 
 var el = document.querySelector('.scramble');
 var fx = new TextScramble(el);
