@@ -1,6 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.81 392.36">
   <defs>
     <style>
+      @keyframes fadeleft {
+        0% {
+          opacity:0;
+          transform:translateX(-40px);
+        }
+        !00% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+      @keyframes faderight {
+        0% {
+          opacity:0;
+          transform:translateX(40px);
+        }
+        !00% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
       .cls-1{
         fill:none;
         stroke:#231f20;
@@ -66,32 +86,92 @@
       .cls-20{
         letter-spacing:-0.01em;
       }
+      #l1, #l2, #l3, #l4 {
+      opacity:0;
+      }
+      #l1_l {
+      animation: fadeleft 1s;
+      }
+      #l1_r {
+      animation:faderight 1s;
+      }
+      #l2_l {
+      animation:fadeleft 1s;
+      animation-delay:0.5s;
+      }
+      #l2_r {
+      animation:faderight 1s;
+      animation-delay:0.5s;
+      }
+      #l3_l {
+      animation:fadeleft 1s;
+      animation-delay:1s;
+      }
+      #l3_r {
+      animation:faderight 1s;
+      animation-delay:1s;
+      }
+      #l4_l {
+      animation:fadeleft 1s;
+      animation-delay:1.5s;
+      }
+      #l4_r {
+      animation:faderight 1s;
+      animation-delay:1.5s;
+      }
     </style>
   </defs>
   <title>elevator</title>
   <g id="Layer_2" data-name="Layer 2">
     <g id="Layer_1-2" data-name="Layer 1">
       <polygon class="cls-1" points="193.13 0.76 161.86 36.8 177.49 36.8 177.49 350.68 209.14 350.68 209.14 36.8 224.85 36.8 193.13 0.76"/>
-      <rect class="cls-1" x="118.62" y="350.68" width="149.48" height="41.18"/><rect class="cls-1" x="0.66" y="50.63" width="150.22" height="64.13"/>
-      <text class="cls-2" transform="translate(14.57 77.19)">
-        <tspan class="cls-3">Late comers /</tspan>
-        <tspan class="cls-5" x="18.16" y="21.6">FOMOers</tspan>
-      </text>
-      <rect class="cls-1" x="234.09" y="50.49" width="150.22" height="64.13"/>
-      <text class="cls-2" transform="translate(264.56 77.19)"><tspan class="cls-9">Exchange</tspan><tspan x="14.16" y="21.6">Listing</tspan></text>
-      <rect class="cls-1" x="0.5" y="146.31" width="150.22" height="41.29"/>
-      <text class="cls-2" transform="translate(7.26 173.92)">Retail Investors</text>
-      <rect class="cls-1" x="234.09" y="145.49" width="150.22" height="41.29"/>
-      <text class="cls-2" transform="translate(259.61 173.92)">Public Sale</text>
-      <rect class="cls-1" x="0.5" y="219.98" width="150.22" height="42.17"/>
-      <text class="cls-2" transform="translate(8.79 247.25)">HNW's / Funds</text>
-      <rect class="cls-1" x="234.09" y="219.16" width="150.22" height="42.17"/>
-      <text class="cls-17" transform="translate(272.96 247.25)">Pre Sale</text>
-      <rect class="cls-1" x="0.5" y="293.02" width="150.22" height="41.29"/>
-      <text class="cls-2" transform="translate(32.91 319.74)"><tspan class="cls-19">Founders</tspan></text>
-      <rect class="cls-1" x="234.09" y="292.19" width="150.22" height="41.29"/>
-      <text class="cls-2" transform="translate(251.85 319.74)">ICO Creation</text>
-      <text class="cls-2" transform="translate(150.19 377.74)">Inception</text>
+      <g id="l4">
+        <g id="l4_l">
+          <rect class="cls-1" x="0.66" y="50.63" width="150.22" height="64.13"/>
+          <text class="cls-2" transform="translate(14.57 77.19)">
+            <tspan class="cls-3">Late comers /</tspan>
+            <tspan class="cls-5" x="18.16" y="21.6">FOMOers</tspan>
+          </text>
+        </g>
+        <g id="l4_r">
+          <rect class="cls-1" x="234.09" y="50.49" width="150.22" height="64.13"/>
+          <text class="cls-2" transform="translate(264.56 77.19)"><tspan class="cls-9">Exchange</tspan><tspan x="14.16" y="21.6">Listing</tspan></text>
+        </g>
+      </g>
+      <g id="l3">
+        <g id="l3_l">
+          <rect class="cls-1" x="0.5" y="146.31" width="150.22" height="41.29"/>
+          <text class="cls-2" transform="translate(7.26 173.92)">Retail Investors</text>
+        </g>
+        <g id="l3_r">
+          <rect class="cls-1" x="234.09" y="145.49" width="150.22" height="41.29"/>
+          <text class="cls-2" transform="translate(259.61 173.92)">Public Sale</text>
+        </g>
+      </g>
+      <g id="l2">
+        <g id="l2_l">
+          <rect class="cls-1" x="0.5" y="219.98" width="150.22" height="42.17"/>
+          <text class="cls-2" transform="translate(8.79 247.25)">HNW's / Funds</text>
+        </g>
+        <g id="l2_r">
+          <rect class="cls-1" x="234.09" y="219.16" width="150.22" height="42.17"/>
+          <text class="cls-17" transform="translate(272.96 247.25)">Pre Sale</text>
+        </g>
+      </g>
+      <g id="l1">
+        <g id="l1_l">
+          <rect class="cls-1" x="0.5" y="293.02" width="150.22" height="41.29"/>
+          <text class="cls-2" transform="translate(32.91 319.74)"><tspan class="cls-19">Founders</tspan></text>
+        </g>
+        <g id="l1_r">
+          <rect class="cls-1" x="234.09" y="292.19" width="150.22" height="41.29"/>
+          <text class="cls-2" transform="translate(251.85 319.74)">ICO Creation</text>
+        </g>
+      </g>
+      <g id="l0">
+        <rect class="cls-1" x="118.62" y="350.68" width="149.48" height="41.18"/>
+        <text class="cls-2" transform="translate(150.19 377.74)">Inception</text>
+      </g>
     </g>
   </g>
 </svg>
