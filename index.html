@@ -86,8 +86,8 @@
               <div class="carousel-content">
                 <h2 id="introtitletext">We help you <span
                   class="txt-rotate"
-                  data-period="2000"
-                  data-rotate='[ "invest", "seek high returns", "embrace the crypto revolution. As it comes."]'></span></h2>
+                  data-period="100"
+                  data-rotate='[ "invest", "seek high returns", "embrace the crypto revolution. <span style=\"color:red;\">As it comes.</span>"]'></span></h2>
                 <p>
                     Coin Consultants is a Cryptocurrency and Initial Coin Offering (ICO) Investors Club established to help High Net Worth Investors and Funds looking to enter the high risk/high return ICO market.
                 </p>
@@ -254,14 +254,17 @@
     <section id="elevator">
     	<div class="container">
     		<header class="section-header">
-    			<h3>Elevator Theory - Our Belief</h3>
+
+
+
+    			<h3 id="n">Elevator Theory- Our Belief</h3>
+
     			<p class="header-text">Elevator theory takes into account the production line or “lifecycle” of a cryptocurrency’s potential to succeed in the high growth, high volatility cryptocurrency universe</p>
     		</header>
     		<div class="row">
- 				<div class="col-lg-2 col-md-2"></div>
-    			<div class="col-lg-8 col-md-8">
+    			<div id="l" class="col-lg-12 col-md-12">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.81 392.36">
+            <svg id="q" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.81 392.36">
               <defs>
                 <style>
                   @keyframes fadeleft {
@@ -269,7 +272,7 @@
                       opacity:0;
                       transform:translateX(-40px);
                     }
-                    !00% {
+                    100% {
                       opacity: 1;
                       transform: translateX(0px);
                     }
@@ -279,20 +282,31 @@
                       opacity:0;
                       transform:translateX(40px);
                     }
-                    !00% {
+                    100% {
                       opacity: 1;
                       transform: translateX(0px);
                     }
                   }
+                  @keyframes grow {
+                      0% {
+                        transform:scaleY(0);
+                        transform-origin: bottom center;
+                      }
+                      100% {
+                        transform:scaleY(1);
+                        transform-origin: bottom center;
+                      }
+                  }
                   .cls-1{
                     fill:none;
-                    stroke:#231f20;
+                    stroke:none;
                     stroke-linecap:round;
                     stroke-miterlimit:10;
                   }
                   .cls-17,
                   .cls-2{
                     font-size:18px;
+                    font-weight:bold;
                     font-family: "Montserrat", sans-serif;
                   }
                   .cls-3{
@@ -349,6 +363,13 @@
                   .cls-20{
                     letter-spacing:-0.01em;
                   }
+                  #arrow {
+                    transform:scaleY(0);
+                  }
+                  svg.active #arrow {
+                    transform:scaleY(1);
+                    animation:grow 2.5s;
+                  }
                   #l1, #l2, #l3, #l4 {
                   opacity:0;
                   transition:0.4s;
@@ -403,7 +424,7 @@
               <title>elevator</title>
               <g id="Layer_2" data-name="Layer 2">
                 <g id="Layer_1-2" data-name="Layer 1">
-                  <polygon class="cls-1" points="193.13 0.76 161.86 36.8 177.49 36.8 177.49 350.68 209.14 350.68 209.14 36.8 224.85 36.8 193.13 0.76"/>
+                  <polygon id="arrow" points="193.13 0.76 161.86 36.8 177.49 36.8 177.49 350.68 209.14 350.68 209.14 36.8 224.85 36.8 193.13 0.76" style="fill:#FFBD4A"/>
                   <g id="l4">
                     <g id="l4_l">
                       <rect class="cls-1" x="0.66" y="50.63" width="150.22" height="64.13"/>
@@ -447,9 +468,9 @@
                       <text class="cls-2" transform="translate(251.85 319.74)">ICO Creation</text>
                     </g>
                   </g>
-                  <g id="l0" class="elevatoranimate">
-                    <rect class="cls-1" x="118.62" y="350.68" width="149.48" height="41.18"/>
-                    <text class="cls-2" transform="translate(150.19 377.74)">Inception</text>
+                  <g id="l0">
+                    <rect x="118.62" y="350.68" width="149.48" height="41.18" style="fill:#FFBD4A; stroke:#FFBD4A;"/>
+                    <text class="cls-2" transform="translate(150.19 377.74)" style="stroke:#FFBD4A; fill:white; font-weight:bold;">Inception</text>
                   </g>
                 </g>
               </g>
@@ -725,9 +746,9 @@ $(window).scroll()
   },
   "retina_detect": true
 });
-window.addEventListener('load', function () {
+/*window.addEventListener('load', function () {
   Scramble.select('#introtitletext').setText('We are Coin Consultants').descramble();
-});
+});*/
 
 
 var TxtRotate = function(el, toRotate, period) {
