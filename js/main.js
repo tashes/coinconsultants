@@ -8,7 +8,7 @@ jQuery(document).ready(function( $ ) {
       $('.back-to-top').fadeOut('slow');
     }
 
-    if ($(this).scrollTop() >= $('#n').scrollTop()) {
+    if ($(this).scrollTop() >= ($('#n').offset().top - $(window).height() + 80)) {
       $('#q').addClass('active');
     }
   });
