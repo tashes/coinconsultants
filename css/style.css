@@ -1027,8 +1027,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0px;
 }
 
-#elevator img {
+#elevator #l
+{
+  text-align:center;
+}
+#elevator svg {
+  max-width:400px;
+  margin:0 auto;
   margin-bottom: 20px;
+  display:inline-inline-block;
 }
 
 
