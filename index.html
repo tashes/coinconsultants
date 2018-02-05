@@ -357,46 +357,46 @@
                     transition-delay:0s;
                   }
                   #l2 {
-                    transition-delay:0.5s;
-                  }
-                  #l3 {
                     transition-delay:1s;
                   }
+                  #l3 {
+                    transition-delay:2s;
+                  }
                   #l4 {
-                    transition-delay:1.5s;
+                    transition-delay:3s;
                   }
                   svg.active #l1, svg.active #l2, svg.active #l3, svg.active #l4 {
                   opacity:1;
                   }
                   svg.active #l1_l {
-                  animation: fadeleft 1s;
+                  animation: fadeleft 1.5s;
                   }
                   svg.active #l1_r {
-                  animation:faderight 1s;
+                  animation:faderight 1.5s;
                   }
                   svg.active #l2_l {
-                  animation:fadeleft 1s;
-                  animation-delay:0.5s;
+                  animation:fadeleft 1.5s;
+                  animation-delay:1s;
                   }
                   svg.active #l2_r {
-                  animation:faderight 1s;
-                  animation-delay:0.5s;
+                  animation:faderight 1.5s;
+                  animation-delay:1s;
                   }
                   svg.active #l3_l {
-                  animation:fadeleft 1s;
-                  animation-delay:1s;
+                  animation:fadeleft 1.5s;
+                  animation-delay:2s;
                   }
                   svg.active #l3_r {
-                  animation:faderight 1s;
-                  animation-delay:1s;
+                  animation:faderight 1.5s;
+                  animation-delay:2s;
                   }
                   svg.active #l4_l {
-                  animation:fadeleft 1s;
-                  animation-delay:1.5s;
+                  animation:fadeleft 1.5s;
+                  animation-delay:3s;
                   }
                   svg.active #l4_r {
-                  animation:faderight 1s;
-                  animation-delay:1.5s;
+                  animation:faderight 1.5s;
+                  animation-delay:3s;
                   }
                 </style>
               </defs>
@@ -569,11 +569,27 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(".elevatoranimate").click(function(){
         $("svg").addClass("active");
     });
 });
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    $('svg').toggleClass('active',
+     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+      scroll >= $("svg").offset().top
+    );
+});*/
+$(document).ready(function(){
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > $("svg").offset().top) {
+      $("svg").addClass("active");
+    }
+  });
+});
+//trigger the scroll
+$(window).scroll()
 </script>
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
