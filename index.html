@@ -84,10 +84,7 @@
 
             <div id="particles-js" class="carousel-container">
               <div class="carousel-content">
-                <h2 id="introtitletext">We help you <span
-                  class="txt-rotate"
-                  data-period="100"
-                  data-rotate='[ "invest", "seek high returns", "embrace the crypto revolution. <span style=\"color:red;\">As it comes.</span>"]'></span></h2>
+                <h2 id="introtitletext">We help you <span id="typer"></span></h2>
                 <p>
                     Coin Consultants is a Cryptocurrency and Initial Coin Offering (ICO) Investors Club established to help High Net Worth Investors and Funds looking to enter the high risk/high return ICO market.
                 </p>
@@ -476,12 +473,16 @@
               </g>
             </svg>
 
+
           </div>
           </div>
           <div class="col-lg-12 col-md-12">
           <p style="text-align:center">The theory is used to identify the creation of upcoming high quality cryptocurrencies with high utility and problem solving capability.
             On a practical level, elevator theory is the central pillar guiding the investment club to obtain access to the highest quality initial coin offerings at the earliest possible stage.</p>
+
     		</div>
+        <p>The theory is used to identify the creation of upcoming high quality cryptocurrencies with high utility and problem solving capability.
+            On a practical level, elevator theory is the central pillar guiding the investment club to obtain access to the highest quality initial coin offerings at the earliest possible stage.</p>
 
 
     	</div>
@@ -592,7 +593,6 @@
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 /*$(document).ready(function(){
     $(".elevatoranimate").click(function(){
@@ -636,7 +636,7 @@ $(window).scroll()
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script src="js/particles.js"></script>
-  <script src="js/scramble.js"></script>
+  <script src="js/jquery.typer.js"></script>
   <script>
     particlesJS("particles-js", {
   "particles": {
@@ -753,56 +753,12 @@ $(window).scroll()
 });*/
 
 
-var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-  var that = this;
-  var delta = 300 - Math.random() * 100;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
-
 window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
+  var win = $(window),
+      foo = $('#typer');
+
+  foo.typer([ "invest", "seek high returns", "embrace the crypto revolution. <span style=\"color:#FFBD4A;\">As it comes.</span>"]);
+//$('#typer_text').typer([ "invest", "seek high returns", "embrace the crypto revolution. <span style=\"color:red;\">As it comes.</span>"]);
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
