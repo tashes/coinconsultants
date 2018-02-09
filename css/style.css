@@ -745,7 +745,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(23, 17, 17, 0.06), rgba(0, 0, 0, 0.1)), url(../img/silver.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -767,7 +767,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
   border: 2px solid #fff;
@@ -782,7 +782,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 28px;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
   border: 2px solid #fff;
@@ -1335,6 +1335,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   transition: 0.4s;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 #contact .form button[type="submit"]:hover {
@@ -1349,7 +1350,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
-  border-radius: 25px;
 }
 
 #footer .footer-top {
